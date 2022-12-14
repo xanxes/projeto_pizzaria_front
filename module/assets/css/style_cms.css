@@ -1,0 +1,228 @@
+/****** RESET ******/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ul, ol {
+    list-style: none;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(https://img.freepik.com/fotos-premium/fundo-de-textura-de-parede-de-concreto-de-cimento-abstrato-preto-escuro_130147-3848.jpg?w=2000);
+    background-blend-mode: darken;
+    background-color: #26343593;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 94px;
+    overflow-x: hidden;
+}
+
+/****** HEADER ******/
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 56px;
+}
+header .title{
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+}
+.nav_cms{
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    gap: 32px;
+}
+.menu_user{
+    background-color: #454949;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 12px;
+}
+.menu_user i{
+    font-size: 35px;
+}
+.menu_user:hover{
+    background-color: white;
+    transition: all 0.5s;
+    color: black;
+}
+.menu_product{
+    background-color: #454949;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 12px;
+}
+.menu_product i{
+    font-size: 35px;
+}
+.menu_product:hover{
+    background-color: white;
+    transition: all 0.5s;
+    color: black;
+}
+.menu_exit{
+    background-color: #454949;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 12px;
+}
+.menu_exit i{
+    font-size: 35px;
+}
+.menu_exit:hover{
+    background-color: white;
+    transition: all 0.5s;
+    color: black;
+}
+
+/****** MAIN ******/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+}
+.container_products{
+    display: flex;
+    flex-direction: column;
+    background-color: #d9d9d948;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    overflow: scroll;
+    gap: 8px;
+}
+.class_product{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    border-radius: 12px;
+}
+.category{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 12px;
+    height: 100%;
+    flex-grow: 1;
+    background-color: #454949;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}
+.name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 12px;
+    height: 100%;
+    flex-grow: 1;
+    background-color: #454949;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;   
+}
+.description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 12px;
+    height: 100%;
+    flex-grow: 1;
+    background-color: #454949;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}
+.type{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 12px;
+    height: 100%;
+    flex-grow: 1;
+    background-color: #454949;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 12px;
+    height: 100%;
+    flex-grow: 1;
+    background-color: #454949;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}
+.promotion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 12px;
+    height: 100%;
+    flex-grow: 1;
+    background-color: #454949;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}
+.price{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 12px;
+    height: 100%;
+    flex-grow: 1;
+    background-color: #454949;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+}

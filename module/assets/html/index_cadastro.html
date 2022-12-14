@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style_cadastro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/image 19.png" type="image/x-icon">
+    <script src="../js/cadastro_usuario.js"></script>
+    <title>CADASTRO - Pizzaria</title>
+</head>
+<body>
+    <form onsubmit=enviarMensagemEresetar() class="registration" id="registration">
+        <div class="title">
+            <h1>CADASTRO</h1>
+        </div>
+        <span class="name">Nome</span>
+        <input id="nome" type="text" placeholder="Nome" required>
+        <span class="rg">RG</span>
+        <input id="rg" type="text" placeholder="RG" required>
+        <span class="cpf">CPF</span>
+        <input id="cpf" type="text" placeholder="CPF" required>
+        <span class="telefone">Telefone</span>
+        <input id="telefone" type="tel" placeholder="Telefone" required>
+        <span class="user">Usuario - E-mail</span>
+        <input id="email" type="email" placeholder="E-mail" required>
+        <span class="pass">Senha</span>
+        <input id="senha" type="password" placeholder="Senha" required>
+        <div class="button">
+            <button type="submit" class="save-button">SALVAR</button>
+        </div>
+    </form>
+</body>
+</html>

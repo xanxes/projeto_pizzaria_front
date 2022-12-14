@@ -1,0 +1,1005 @@
+/****** RESET ******/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+
+
+/****** BODY ******/
+.button_init {
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+    border-radius: 50px;
+    background-color: #E7A200;
+    color: #4C5A5D;
+    bottom: 50px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    border: 1px solid #ebe7db5a;
+}
+
+.button_init:hover {
+    background-color: #d03012;
+    transition: 1s;
+}
+
+.button_init:hover i {
+    color: white;
+    transition: 1s;
+}
+
+/****** MENU-BURGUER ******/
+#menu-burguer-conteiner{
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    display: none;
+}
+.menu-burguer, .menu-burguer::before, .menu-burguer::after{
+    display: block;
+    content: "";
+    height: 4px;
+    width: 36px;
+    background-color: white; 
+    position: absolute;
+    transition: all 0.5s;
+}
+.menu-burguer::before{
+    transform: translateY(-12px);
+}
+.menu-burguer::after{
+    transform: translateY(12px);
+}
+#menu-burguer-conteiner.show .menu-burguer{
+    background-color: transparent;
+}
+#menu-burguer-conteiner.show .menu-burguer::before{
+    transform: rotate(45deg);
+}
+#menu-burguer-conteiner.show .menu-burguer::after{
+    transform: rotate(-45deg);
+}
+@media (max-width:768px) {
+    header{
+        display: flex;
+        position: absolute;
+        top: 3%;
+        right: 5%;
+    }
+    #menu-burguer-conteiner{
+        display: flex;
+        justify-content: flex-end;
+        z-index: 1;
+    }
+}
+
+
+
+/****** HEADER ******/
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 84px;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    gap: 32px;
+    position: absolute;
+    justify-content: flex-end;
+}
+
+
+@media (max-width: 768px) {
+    .navigation{
+        background-color: #000;
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top: -27px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        flex-direction: column;
+        justify-content: center;
+        gap: 65px;
+        font-size: 2.5rem;
+        font-weight: 300;
+        transform: translate(100%);
+        transition: all 1s;
+    }
+    #menu-burguer-conteiner.show ~ .navigation{
+        transform: translateX(-90vw);
+    }
+}
+
+
+/****** MAIN ******/
+.apresentation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    padding: 84px;
+    background-image: url(https://img.freepik.com/fotos-premium/pizza-de-pepperoni-saboroso-com-cogumelos-e-azeitonas_79782-1251.jpg?w=2000);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    margin-right: 11%;
+}
+
+.sob_title {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.title_main {
+    font-size: 62px;
+    font-family: 'Roboto', sans-serif;
+    color: #E7A200;
+    margin-bottom: 20px;
+}
+
+.sub_title {
+    font-size: 16px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.title {
+    font-size: 62px;
+    font-family: 'Roboto', sans-serif;
+    color: #4C5A5D;
+}
+
+
+
+@media (max-width:768px) {
+    .apresentation{
+        padding: 16px;
+    }
+
+    .text{
+        width: fit-content;
+        height: 300px;
+        margin-right: 0%;
+        background-color: #4c5a5d92;
+        border-radius: 12px;
+        padding: 12px;
+    }
+    .title_main {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+    
+    .sub_title {
+        font-size: 14px;
+    }
+    
+    .title {
+        font-size: 32px;
+    }
+}
+
+
+
+/****** MAIN-SECTION-PROMOCOES ******/
+.promotion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    margin-top: 64px;
+}
+
+.promocoes {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    height: fit-content;
+    margin-top: 38px;
+    margin-bottom: 38px;
+    gap: 48px;
+}
+
+/****** CARD-PROMO ******/
+/* .card_promo{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #E7A200;
+    height: 420px;
+    width: 360px;
+    border-radius: 20px;
+    padding: 25px;
+}
+.card_promo:hover .number_card{
+    color: #d03012;
+    transition: 0.5s;
+}
+.card_promo img{
+    height: 220px;
+    border-radius: 12px;
+}
+.txt_card{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    gap: 5px;
+}
+.txt_card h1 {
+    margin:0;
+}
+.number_card{
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+} */
+/************************/
+
+
+
+@media (max-width:768px) {
+    .promotion{
+        margin-top: 26px;
+    }
+
+    .promocoes {
+        margin-top: 14px;
+        margin-bottom: 14px;
+        padding: 12px;
+        gap: 28px;
+    }
+    
+    /****** CARD-PROMO ******/
+    /* .card_promo {
+        height: 320px;
+        width: 290px;
+        border-radius: 18px;
+        padding: 18px;
+    }
+    
+    .card_promo img {
+        height: fit-content;
+        border-radius: 10px;
+    }
+    
+    .txt_card {
+        gap: 5px;
+        margin-top: 5px;
+    }
+    
+    .txt_card h1{ 
+        font-size: 22px;
+    }
+
+    span.description{
+        font-size: 16px;
+    }
+    
+    span.price{
+        font-size: 28px;
+    } */
+    /*************************/
+}
+
+
+
+/****** MAIN-SECTION-FAVORITOS ******/
+.favorities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.favoritos {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    height: fit-content;
+    margin-top: 38px;
+    margin-bottom: 38px;
+    gap: 48px;
+}
+
+/****** CARD-FAVORITOS ******/
+.card_favoritos {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #E7A200;
+    height: 420px;
+    width: 360px;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.card_favoritos:hover .number_card {
+    color: #d03012;
+    transition: 0.5s;
+}
+
+.card_favoritos img {
+    height: 220px;
+    border-radius: 12px;
+}
+
+.txt_card {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    gap: 5px;
+}
+.txt_card h1 {
+    margin:0;
+}
+.number_card {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+}
+/****************************/
+
+
+
+@media (max-width:768px) {
+    .favoritos {
+        margin-top: 14px;
+        margin-bottom: 14px;
+        padding: 12px;
+        gap: 28px;
+    }
+
+    /****** CARD-FAVORITOS ******/
+    .card_favoritos {
+        height: 320px;
+        width: 290px;
+        border-radius: 18px;
+        padding: 18px;
+    }
+    
+    .card_favoritos img {
+        height: fit-content;
+        border-radius: 10px;
+    }
+    
+    .txt_card {
+        gap: 5px;
+        margin-top: 5px;
+    }
+    
+    .txt_card h1{ 
+        font-size: 22px;
+    }
+
+    span.description{
+        font-size: 16px;
+    }
+    
+    span.price{
+        font-size: 28px;
+    }
+    /****************************/
+}
+
+
+
+/****** MAIN-SECTION-MENU(CARDAPIO) ******/
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container_pizzas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 38px;
+    padding-top: 38px;
+    padding-bottom: 38px;
+    width: 100%;
+    background-color: #EBE7DB;
+    font-family: 'Roboto', sans-serif;
+    color: #d03012;
+    font-size: 32px;
+}
+
+.container_pizzas img {
+    height: 400px;
+    width: 500px;
+
+}
+
+.salgadas {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.column1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.column2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+/****** CARD-PRODUTOS ******/
+/* .card_produtos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 180px;
+    width: 700px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card_produtos i {
+    font-size: 28px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: #d03012;
+}
+
+.info h1 {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.info span {
+    font-size: 22px;
+    font-weight: 400;
+} */
+/****************************/
+
+.outras {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 38px;
+    height: 100%;
+    width: 100%;
+}
+
+.organicas {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    padding-top: 38px;
+}
+
+.organicas img {
+    height: 300px;
+    width: 500px;
+    margin-bottom: 50px;
+}
+
+.doces {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    padding-top: 38px;
+    gap: 10px;
+    background-color: #EBE7DB;
+}
+
+.doces img {
+    height: 300px;
+    width: 500px;
+    margin-bottom: 50px;
+}
+
+.bebidas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 38px;
+    padding-top: 38px;
+    padding-bottom: 38px;
+    background-color: #EBE7DB;
+    font-family: 'Roboto', sans-serif;
+    color: #d03012;
+    font-size: 32px;
+}
+
+.bebidas img {
+    height: 300px;
+    width: 500px;
+    margin-bottom: 50px;
+}
+
+.container_bebidas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 38px;
+    padding-top: 38px;
+    padding-bottom: 38px;
+    width: 100%;
+}
+
+
+@media (max-width:768px) {
+    .container_pizzas {
+        margin-top: 26px;
+        padding-top: 26px;
+        padding-bottom: 26px;
+        font-size: 24px;
+    }
+    
+    .container_pizzas img {
+        height: 300px;
+        width: 390px;
+    }
+    
+    .salgadas {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .column1 {
+        width: 100%;
+    }
+    
+    .column2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    /****** CARD-PRODUTOS ******/
+    /* .card_produtos {
+        height: 150px;
+        width: 90%;
+    }
+
+    .card_produtos i {
+        font-size: 20px;
+    }
+
+    .info {
+        gap: 5px;
+    }
+
+    .info h1 {
+        font-size: 22px;
+    }
+
+    .info span {
+        font-size: 16px;
+    } */
+    /****************************/
+
+    .outras {
+        flex-direction: column;
+        padding-top: 26px;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .organicas {
+        justify-content: center;
+        width: 100%;
+        padding-top: 26px;
+    }
+    
+    .organicas img {
+        height: 200px;
+        width: 390px;
+        margin-bottom: 30px;
+    }
+    
+    .doces {
+        justify-content: center;
+        width: 100%;
+        padding-top: 38px;
+    }
+    
+    .doces img {
+        height: 200px;
+        width: 350px;
+        margin-bottom: 30px;
+    }
+    
+    .bebidas {
+        margin-bottom: 26px;
+        padding-top: 26px;
+        padding-bottom: 26px;
+        font-size: 24px;
+    }
+    
+    .bebidas img {
+        height: 240px;
+        width: fit-content;
+        margin-bottom: 30px;
+    }
+    
+    .container_bebidas {
+        flex-direction: column;
+        margin-top: 26px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        width: 100%;
+    }
+}
+
+
+
+/****** MAIN-SECTION-SERVICOS ******/
+.services {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container_services {
+    display: flex;
+    background-color: #EBE7DB;
+    height: 290px;
+    width: 100%;
+    margin-top: 38px;
+    margin-bottom: 38px;
+    align-items: center;
+    justify-content: center;
+}
+
+.container_info {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.img_info img {
+    width: 100px;
+    height: 100px;
+}
+
+.txt_info {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.txt_info span {
+    font-size: 28px;
+    font-weight: 700;
+    color: #4C5A5D;
+}
+
+.num {
+    font-size: 28px;
+    font-weight: 300;
+    color: #4C5A5D;
+}
+
+
+
+@media (max-width:768px) {
+    .container_services {
+        height: fit-content;
+        padding: 36px;
+        margin-top: 26px;
+        margin-bottom: 26px;
+    }
+    .container_info {
+        gap: 30px;
+    }
+    
+    .img_info img {
+        width: 100px;
+        height: 100px;
+    }
+    .txt_info {
+        gap: 5px;
+    }
+    .txt_info span {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
+    .num {
+        font-size: 18px;
+        gap: 5px;
+    }
+    .png_services{
+        display: none;
+    }
+}
+
+
+
+/****** MAIN-SECTION-CONTATO ******/
+.contact_user {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    position: relative;
+    min-height: 52vh;
+}
+
+.form_contact {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 580px;
+    border: 2px solid #4C5A5D;
+    border-radius: 12px;
+    position: absolute;
+    bottom: -25%;
+    background-color: white;
+    padding: 30px;
+    gap: 8px;
+}
+
+.form_contact span {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: #4C5A5D;
+}
+
+.form_contact input {
+    height: 50px;
+    border-radius: 8px;
+    padding-left: 12px;
+    border: solid #4C5A5D;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #4C5A5D;
+}
+
+.txt_msg {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100px;
+}
+
+.txt_msg input {
+    height: 200px;
+}
+
+.type_msg {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.checkbox {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.input {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.input input {
+    height: 35px;
+    width: 35px;
+}
+
+.container_button {
+    display: flex;
+    justify-content: center;
+}
+
+.submit_form_contact {
+    margin-top: 38px;
+    height: 60px;
+    width: 200px;
+    border-radius: 75px;
+    font-size: 22px;
+    font-weight: 700;
+    background-color: #E7A200;
+    border: solid #E7A200;
+    color: #4C5A5D;
+}
+
+.submit_form_contact:hover {
+    background-color: #d03012;
+    color: white;
+    border: solid #d03012;
+    transition: 1s;
+}
+
+
+
+@media (max-width:768px) {
+    .contact_user{
+        min-height: 85vh;
+    }
+    .form_contact{
+        width: 90%;
+        position: relative;
+        margin-top: 26px;
+    }
+}
+
+
+
+/****** FOOTER ******/
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #E7A200;
+    height: 220px;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding: 30px;
+}
+
+.developers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 100%;
+    gap: 12px;
+    margin-left: 150px;
+}
+
+.bold {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.developers p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    width: 300px;
+    margin-right: 150px;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.address p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+@media (max-width:768px) {    
+    footer {
+        justify-content: flex-start;
+        height: 190px;
+        gap: 12px;
+    }
+
+    .developers {
+        margin-left: 0px;
+    }
+
+    .developers img{
+        height: 120px;
+    }
+    
+    .bold {
+        font-size: 15px;
+        font-weight: 700;
+    }
+    
+    .developers p {
+        font-size: 14px;
+    }
+    
+    .social {
+        gap: 6px;
+        width: fit-content;
+        margin-right: 0px;
+    }
+    
+    .address {
+        gap: 3px;
+    }
+    
+    .address p {
+        font-size: 14px;
+        font-weight: 300;
+    }
+    
+    .contact {
+        gap: 3px;
+    }
+    
+    .contact p {
+        font-size: 14px;
+        font-weight: 300;
+    }
+}
