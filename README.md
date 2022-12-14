@@ -177,7 +177,7 @@ Projeto construído durante as aulas de BackEnd e FrontEnd, no curso de Desenvol
 
 <a href="https://www.figma.com/file/hX5Rv8g9IL5lFkW4FxFwqv/pizzaria?node-id=0%3A1&t=lz6Kh4gfPFkG5yel-0">Figma</a>
 
-<a href="https://srmt03.github.io/projeto-integrado-2sem-web/">Site</a>
+<a href="https://xanxes.github.io/projeto_pizzaria_front/">Site</a>
 
 > Para entrar no dashboard, um úsuario já está pré-cadastrado.
 > E-mail: admin@admin.com
