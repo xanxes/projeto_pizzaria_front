@@ -33,5 +33,5 @@ fazPost(url, body)
 }
 
 function sendToLogin() {
-    location.href = '/module/assets/html/index_cms.html';
+    location.href = '/projeto_pizzaria_front/module/assets/html/index_cms.html';
   }
